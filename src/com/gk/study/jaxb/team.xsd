@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/team" xmlns:tns="http://www.example.org/team" elementFormDefault="qualified">
+    <element name="Team">
+    	<complexType>
+    		<sequence>
+    		<element name="Name" type="string"/>
+    		<element name="DateFounded" type="date"/>
+	    		<element name="Players">
+	    			<complexType>
+	    				<sequence minOccurs="2" maxOccurs="11">
+	    					<element name="Player">
+	    						<complexType>
+	    							<sequence>
+	    								<element name="Name" type="string"/>
+	    								<element name="Position" type="string"/>
+	    							</sequence>
+	    						</complexType>
+	    					</element>
+	    				</sequence>
+	    			</complexType>
+	    		</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>
